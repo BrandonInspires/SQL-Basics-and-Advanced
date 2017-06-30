@@ -5,6 +5,11 @@
 - _Italics_ - 
 - ```code block``` - used for code examples
 
+TODO: 
+- Refactor example to be based on SQLPR sample data
+- Examples for ACID Properties
+- Get MySQL sample data file to work in POSTGRES
+
  ### All the examples in this repo use the sample data found in the sample data folder
 # Foundational SQL
 - [ ] Can describe primary key in SQL
