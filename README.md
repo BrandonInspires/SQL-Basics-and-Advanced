@@ -4,6 +4,8 @@
 - lowecase - Indicates a user defined item like a table name or column name
 - _Italics_ - 
 - ```code block``` - used for code examples
+
+ ### All the examples in this repo use the sample data found in the sample data folder
 # Foundational SQL
 - [ ] Can describe primary key in SQL
 ```sql
@@ -112,6 +114,9 @@ INNER JOIN addresses ON =
 
 ```
 - [ ] Can describe SQL ACID principals
-```sql
-
+```
+Atomicity - Is an indivisable and irreducible series of database operations where either all occur or nothing occurs. Atomicity prevents partial database updates by rejecting or reversing all partial transactions
+Consistency - Is the guarantee that all specified rules including constraints, cascades, and triggers are followed when the database is updated
+Isolation - is the principle of controlling concurrency effects across a database. Systems with higher levels of isolation have less concurrency effects (i.e. effects from multiple operations working on the same data) but consume higher levels of system resources and higher chances that one ongoing transaction will block another.
+Durability - is the principle that committed transactions will permenantly survive (for instance, in the case of a system crash). This is usually accomplished by flushing the transaction's log records to non-volatile storage.
 ```
