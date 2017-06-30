@@ -1,6 +1,6 @@
 # SQL-Basics-and-Advanced
 ## Conventions
-- UPPERCASE - Indicates a SQL Keyword (e.g. SELECT, JOIN, CREATE)
+- UPPERCASE - Indicates a SQL Keyword (e.g. ```SELECT```, ```JOIN```, ```CREATE```)
 - lowecase - Indicates a user defined item like a table name or column name
 - _Italics_ - 
 - ```code block``` - used for code examples
@@ -59,12 +59,8 @@ SELECT Name FROM addresses WHERE City = "Oakland"
 ```
 - [ ] Can use join clause to join two tables on a primary key id in SQL
 ```sql
-SELECT * FROM persons, addresses
-JOIN addresses ON Name
-```
-- [ ] Can use limit clause to select a subset of a rows in SQL
-```sql
-
+SELECT * FROM persons 
+INNER JOIN addresses ON = 
 ```
 - [ ] Can describe the difference between a left, right, inner and outer joins - [ ] in SQL
 ```sql
