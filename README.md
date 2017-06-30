@@ -1,8 +1,13 @@
 # SQL-Basics-and-Advanced
+## Conventions
+- UPPERCASE - Indicates a SQL Keyword (e.g. SELECT, JOIN, CREATE)
+- lowecase - Indicates a user defined item like a table name or column name
+- _Italics_ - 
+- ```code block``` - used for code examples
 # Foundational SQL
 - [ ] Can describe primary key in SQL
 ```sql
--- A unique identifier for each record a database table
+-- A unique identifier for each record in a database table
 -- Setting the primary key constraint
 CREATE TABLE persons (
 	ID Integer NOT NULL,
@@ -27,23 +32,35 @@ Setting the primary key constraint on multiple fields
 ```
 - [ ] Can describe foreign key in SQL
 ```sql
+/* A foreign key is a key that links two tables together
+It's a field or collection of fields that refer to the primary key 
+in another table
+*/
+
+CREATE TABLE addresses (
+	Street VARCHAR(255),
+	City VARCHAR(255),
+	State VARCHAR(12)
+	Name VARCHAR(255) FOREIGN KEY REFERENCES persons(ID)
+)
 
 ```
 - [ ] Can use select statement to return everything from a single table in SQL
 ```sql
-
+SELECT * FROM addresses
 ```
 - [ ] Can use select statement to return specific columns from a single table in - [ ] SQL
 ```sql
-
+SELECT street FROM addresses
 ```
 - [ ] Can use where clause to return a subset of the rows in a table in SQL
 ```sql
-
+SELECT Name FROM addresses WHERE City = "Oakland"
 ```
 - [ ] Can use join clause to join two tables on a primary key id in SQL
 ```sql
-
+SELECT * FROM persons, addresses
+JOIN addresses ON Name
 ```
 - [ ] Can use limit clause to select a subset of a rows in SQL
 ```sql
